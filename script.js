@@ -164,8 +164,8 @@ function calculateBisection(funcInput, aInput, bInput, tol, MX_IT) {
     stepsHTML += `<tr class="${iteration % 2 === 0 ? "table-light" : ""}">
                     <td>${iteration}</td>
                     <td>${formatNumber(oldA)}</td>
-                    <td>${formatNumber(oldB)}</td>
                     <td>${formatNumber(p)}</td>
+                    <td>${formatNumber(oldB)}</td>
                     <td>${formatNumber(fp)}</td>
                     <td>${updateStep}</td>
                   </tr>`;
