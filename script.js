@@ -105,7 +105,7 @@ function calculateBisection(funcInput, aInput, bInput, tol, MX_IT) {
       <div class="card-body">
   `;
 
-  do {
+  while (iteration < MX_IT){
     let oldA = a;
     let oldB = b;
     let fa = f(oldA);
@@ -169,7 +169,10 @@ function calculateBisection(funcInput, aInput, bInput, tol, MX_IT) {
                     <td>${formatNumber(fp)}</td>
                     <td>${updateStep}</td>
                   </tr>`;
-  } while (Math.abs(b - a) / 2 > tol && iteration < MX_IT);
+    if(Math.abs(fp) < tol || fp === 0){
+      break;
+    }
+  }
 
   explanationHTML += `</div></div>`;
 
