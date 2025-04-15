@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bisection Method Solver</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container-fluid px-md-4 my-4">
+  <div class="card shadow">
+    <div class="card-header bg-gradient bg-primary text-white">
+      <div class="d-flex align-items-center">
+        <div class="fa-icon-container bg-white text-primary">
+          <i class="fas fa-calculator"></i>
+        </div>
+        <h2 class="mb-0">Bisection Method Calculator</h2>
+      </div>
+    </div>
+    <div class="card-body">
+      <form id="bisectionForm" class="row g-3">
+        <div class="col-lg-4 col-md-6">
+          <label for="func" class="form-label"><i class="fas fa-superscript me-1"></i>Function f(x)</label>
+          <div class="input-group">
+            <span class="input-group-text"><i class="fas fa-square-root-alt"></i></span>
+            <input type="text" class="form-control" id="func" placeholder="e.g. x^3 - 2*x - 1" required>
+            <div class="invalid-feedback">Please provide a valid function.</div>
+          </div>
+          <small class="form-text text-muted">
+            <i class="fas fa-info-circle me-1"></i>
+            Supported: +, -, *, /, ^, sin(), cos(), tan(), ln(), log(), sqrt()
+          </small>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-6">
+          <label for="a" class="form-label"><i class="fas fa-arrow-left me-1"></i>Lower Bound (a)</label>
+          <div class="input-group">
+            <span class="input-group-text"><i class="fas fa-less-than"></i></span>
+            <input type="number" step="any" class="form-control" id="a" required>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-6">
+          <label for="b" class="form-label"><i class="fas fa-arrow-right me-1"></i>Upper Bound (b)</label>
+          <div class="input-group">
+            <span class="input-group-text"><i class="fas fa-greater-than"></i></span>
+            <input type="number" step="any" class="form-control" id="b" required>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6 col-sm-6">
+          <label for="tolerance" class="form-label"><i class="fas fa-balance-scale me-1"></i>Tolerance</label>
+          <div class="input-group">
+            <span class="input-group-text"><i class="fas fa-compress-alt"></i></span>
+            <input type="number" step="any" class="form-control" id="tolerance" value="0.0001" required>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6 col-sm-6 align-self-end">
+          <button type="submit" class="btn btn-primary w-100">
+            <i class="fas fa-calculator me-1"></i>Solve
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="row mt-4">
+    <div class="col-12">
+      <div id="explanation" class="mb-4"></div>
+    </div>
+
+    <div class="col-12 d-none" id="resultContainer">
+      <div id="result">
+        <div class="card shadow">
+          <div class="card-header bg-light">
+            <div class="d-flex align-items-center">
+              <i class="fas fa-table result-icon"></i>
+              <h4 class="mb-0">Iterations Table</h4>
+            </div>
+          </div>
+          <div class="card-body p-0">
+            <div class="table-responsive">
+              <table class="table table-bordered table-hover mb-0">
+                <thead class="table-light">
+                  <tr>
+                    <th><i class="fas fa-hashtag me-1"></i>Iteration</th>
+                    <th><i class="fas fa-arrow-left me-1"></i>a</th>
+                    <th><i class="fas fa-arrow-right me-1"></i>b</th>
+                    <th><i class="fas fa-crosshairs me-1"></i>p</th>
+                    <th><i class="fas fa-equals me-1"></i>f(p)</th>
+                    <th><i class="fas fa-exchange-alt me-1"></i>Update</th>
+                  </tr>
+                </thead>
+                <tbody id="stepsTable"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <footer class="mt-4 text-center text-muted">
+    <p><i class="fas fa-code me-1"></i> Bisection Method Calculator by <span><a href="https://github.com/Fatin007" class="text-decoration-none text-primary" target="_blank">Fatin007</a></span> </p>
+  </footer>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
