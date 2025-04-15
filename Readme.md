@@ -1,2 +1,2 @@
 ### Bisection Method Solver
-- Link: [Click Here](https://fatin007.github.io/Bisection_Method_Calculator/)
+<a href="https://fatin007.github.io/Bisection_Method_Calculator/" target="_blank">Click here</a>
