@@ -1,0 +1,62 @@
+{
+  "application": {
+    "name": "Bisection Method Calculator",
+    "version": "1.0.0",
+    "author": "Fatin007",
+    "githubUrl": "https://github.com/Fatin007",
+    "description": "An interactive tool for finding roots of equations using the Bisection Method with step-by-step solutions."
+  },
+  "seo": {
+    "title": "Bisection Method Calculator | Find Roots of Equations",
+    "description": "Free online Bisection Method Calculator to find roots of equations with step-by-step solutions. Perfect for numerical analysis and engineering students.",
+    "keywords": ["bisection method", "root finding", "numerical analysis", "equation solver", "mathematical tool", "calculator"],
+    "canonical": "https://fatin007.github.io/Bisection_Method_Calculator/",
+    "ogImage": "assets/images/preview.png",
+    "twitterCard": "summary_large_image"
+  },
+  "features": [
+    "Root finding for mathematical functions",
+    "Step-by-step solution display",
+    "Interactive user interface",
+    "Support for various mathematical operations",
+    "Detailed iteration table",
+    "Error tolerance setting",
+    "Real-time function evaluation",
+    "Responsive design for mobile and desktop",
+    "User-friendly input validation"
+  ],
+  "supportedFunctions": [
+    {
+      "operation": "Basic Arithmetic",
+      "symbols": ["+", "-", "*", "/", "^"]
+    },
+    {
+      "operation": "Trigonometric",
+      "symbols": ["sin()", "cos()", "tan()"]
+    },
+    {
+      "operation": "Logarithmic",
+      "symbols": ["ln()", "log()"]
+    },
+    {
+      "operation": "Other",
+      "symbols": ["sqrt()"]
+    }
+  ],
+  "examples": [
+    {
+      "function": "x^3 - 2*x - 1",
+      "lowerBound": 1,
+      "upperBound": 2,
+      "tolerance": 0.0001,
+      "root": 1.5214
+    },
+    {
+      "function": "sin(x) - x/2",
+      "lowerBound": 0,
+      "upperBound": 2,
+      "tolerance": 0.0001,
+      "root": 1.8955
+    }
+  ]
+}

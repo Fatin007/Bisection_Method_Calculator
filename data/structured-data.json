@@ -1,0 +1,16 @@
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Bisection Method Calculator",
+  "url": "https://fatin007.github.io/Bisection_Method_Calculator/",
+  "description": "Free online calculator for finding roots of equations using the Bisection Method with step-by-step solutions",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Any",
+  "screenshot": "https://fatin007.github.io/Bisection_Method_Calculator/assets/images/preview.png",
+  "featureList": "Root finding, Step-by-step solution, Mathematical function evaluation",
+  "author": {
+    "@type": "Person",
+    "name": "Mohammad Fatin Nur",
+    "url": "https://github.com/Fatin007"
+  }
+}
